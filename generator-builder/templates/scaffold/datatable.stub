@@ -1,0 +1,26 @@
+<?php
+
+namespace $NAMESPACE_DATATABLES$;
+
+use $NAMESPACE_MODEL$\$MODEL_NAME$;
+
+class $MODEL_NAME$DataTable
+{
+    public function get()
+    {
+        $model = new $MODEL_NAME$();
+        /** @var Post $query */
+        $query = $MODEL_NAME$::all();
+        $query->map(function ($item) {
+            $id = $item['id'];
+            $item['action'] = view('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.datatables_actions', compact('id'))->render();
+
+            return $item;
+        });
+        $field = $model->getFillable();
+        array_push($field, 'action');
+        $data = $query->map->only($field)->toArray();
+
+        return array_map('array_values', $data);
+    }
+}

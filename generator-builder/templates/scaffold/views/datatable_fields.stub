@@ -1,0 +1,7 @@
+$FIELDS$
+
+<!-- Submit Field -->
+<div class="form-group col-sm-12">
+    {{ Form::button('save', ['type'=>'submit','class' => 'btn btn-primary','id'=>'btnSave','data-loading-text'=>"<span class='spinner-border spinner-border-sm'></span> Processing...", 'tabindex' => "5"]) }}
+    {{ Form::button('Cancel', ['type'=>'reset','class' => 'btn btn-light','id'=>'btnCancel','data-dismiss'=>'modal','aria-label'=>'Close']) }}
+</div>

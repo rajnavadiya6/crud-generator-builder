@@ -1,0 +1,18 @@
+<div id="createModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create $MODEL_NAME_HUMAN$</h5>
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal">×</button>
+            </div>
+            {!! Form::open(['route' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store'$FILES$,'id'=>'createForm']) !!}
+            <div class="modal-body">
+                <div class="row">
+                    @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+                </div>
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>

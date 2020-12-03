@@ -1,0 +1,6 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
+    {!! Form::textarea('$FIELD_NAME$', old('$FIELD_NAME$'), ['class' => 'form-control '. ($errors->has('$FIELD_NAME$') ? 'is-invalid':'')$SIZE$]) !!}
+    <div class="invalid-feedback">{{ $errors->first('$FIELD_NAME$') }}</div>
+</div>

@@ -1,0 +1,56 @@
+@import 'stisla-theme/scss/style';
+@import 'stisla-theme/scss/components';
+
+.dataTables_wrapper {
+    @media only screen and (device-width: 768px) {
+        .dataTables_length {
+            padding-top: 10px;
+        }
+    }
+
+    .dataTables_paginate {
+        font-size: medium;
+
+        .paginate_button.current {
+            color: white !important;
+            background: #6777ef !important;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+            border: 1px solid #6777ef !important;
+            padding: 5px !important;
+
+            &:hover {
+                color: white !important;
+            }
+        }
+
+        .paginate_button:not(.current) {
+            color: #212529 !important;
+            margin: 0px 5px !important;
+            padding: 5px !important;
+
+            &:hover {
+                background: #6777ef !important;
+                border: 1px solid transparent !important;
+                color: #fff !important;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            }
+        }
+
+        .paginate_button:not(.previous),
+        .paginate_button:not(.next) {
+            padding: 5px 10px 5px 10px !important;
+        }
+
+        @media (max-width: 768px) {
+            font-size: small;
+            .paginate_button:not(.previous),
+            .paginate_button:not(.next) {
+                padding: 0px !important;
+            }
+        }
+    }
+}
+
+.dataTables_paginate {
+    margin-top: 12px;
+}

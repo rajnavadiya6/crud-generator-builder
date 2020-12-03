@@ -1,0 +1,115 @@
+<?php
+
+namespace $NAMESPACE_CONTROLLER$;
+
+use $NAMESPACE_DATATABLES$\$MODEL_NAME$DataTable;
+use $NAMESPACE_MODEL$\$MODEL_NAME$;
+use $NAMESPACE_REQUEST$\Create$MODEL_NAME$Request;
+use $NAMESPACE_REQUEST$\Update$MODEL_NAME$Request;
+use $NAMESPACE_REPOSITORY$\$MODEL_NAME$Repository;
+use $NAMESPACE_APP$\Http\Controllers\AppBaseController;
+use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Contracts\View\View;
+use Exception;
+use Response;
+
+class $MODEL_NAME$Controller extends AppBaseController
+{
+    /** @var  $MODEL_NAME$Repository */
+    private $$MODEL_NAME_CAMEL$Repository;
+
+    public function __construct($MODEL_NAME$Repository $$MODEL_NAME_CAMEL$Repo)
+    {
+        $this->$MODEL_NAME_CAMEL$Repository = $$MODEL_NAME_CAMEL$Repo;
+    }
+
+    /**
+     * Display a listing of the $MODEL_NAME$.
+     *
+     * @param Request $request
+     *
+     * @return View|Response
+     */
+    public function index(Request $request)
+    {
+        if ($request->ajax()) {
+            $data['data'] = (new $MODEL_NAME$DataTable())->get();
+    
+            return $data;
+        }
+
+        return view('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.index');
+    }
+
+    /**
+     * Store a newly created $MODEL_NAME$ in storage.
+     *
+     * @param Create$MODEL_NAME$Request $request
+     *
+     * @return JsonResponse
+     */
+    public function store(Create$MODEL_NAME$Request $request)
+    {
+        $input = $request->all();
+
+        $$MODEL_NAME_CAMEL$ = $this->$MODEL_NAME_CAMEL$Repository->create($input);
+       
+        return $this->sendSuccess('$MODEL_NAME_HUMAN$ saved successfully.');
+    }
+
+    /**
+     * Display the specified $MODEL_NAME$.
+     *
+     * @param $MODEL_NAME$ $$MODEL_NAME_CAMEL$
+     *
+     * @return JsonResponse
+     */
+    public function show($MODEL_NAME$ $$MODEL_NAME_CAMEL$)
+    {
+        return $this->sendResponse($$MODEL_NAME_CAMEL$, '$MODEL_NAME_HUMAN$ Retrieved Successfully.');
+    }
+
+    /**
+     * Show the form for editing the specified $MODEL_NAME$.
+     *
+     * @param $MODEL_NAME$ $$MODEL_NAME_CAMEL$
+     *
+     * @return JsonResponse
+     */
+    public function edit($MODEL_NAME$ $$MODEL_NAME_CAMEL$)
+    {
+        return $this->sendResponse($$MODEL_NAME_CAMEL$, '$MODEL_NAME_HUMAN$ Retrieved Successfully.');        
+    }
+
+    /**
+     * Update the specified $MODEL_NAME$ in storage.
+     *
+     * @param Update$MODEL_NAME$Request $request
+     * @param $MODEL_NAME$ $$MODEL_NAME_CAMEL$ 
+     *
+     * @return JsonResponse
+     */
+    public function update(Update$MODEL_NAME$Request $request,$MODEL_NAME$ $$MODEL_NAME_CAMEL$)
+    {
+        $this->$MODEL_NAME_CAMEL$Repository->update($request->all(), $$MODEL_NAME_CAMEL$->id);
+       
+       return $this->sendSuccess('$MODEL_NAME_HUMAN$ updated successfully.');      
+    }
+
+    /**
+     * Remove the specified $MODEL_NAME$ from storage.
+     *
+     * @param $MODEL_NAME$ $$MODEL_NAME_CAMEL$
+     *
+     * @throws Exception
+     *
+     * @return JsonResponse
+     */
+    public function destroy($MODEL_NAME$ $$MODEL_NAME_CAMEL$)
+    {
+        $$MODEL_NAME_CAMEL$->delete();
+
+        return $this->sendSuccess('$MODEL_NAME_HUMAN$ deleted successfully.');
+    }
+}

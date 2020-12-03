@@ -1,0 +1,10 @@
+<table class="table table-responsive-sm table-striped table-bordered" id="$MODEL_NAME_PLURAL_SNAKE$tbl">
+    <thead>
+        <tr>
+            $FIELD_HEADERS$
+            <th scope="col" class="action-column">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
