@@ -10,46 +10,42 @@ Laravel Crud Generator GUI Builder
 
 This Generator package provides various generators like CRUD, API, Controller, Model, Migration, View for your painless development of your applications.
 
-## Requirements
+# Requirements
     Laravel >= ^8.0
     PHP >= ^7.3
 
-## Installation
+# Installation
 
 ### Install laravel 8
 
-```
+```apacheconfig
     composer create-project --prefer-dist laravel/laravel blog
 ```
 ### Install Jetstream with the Livewire stack...
-```
+```apacheconfig
     composer require laravel/jetstream
 
     php artisan jetstream:install livewire
 ```
 ### Install crud/generator-builder
-```
+```apacheconfig
     composer require crud/generator-builder
- 
 ```
 ### Publish Layout
-```
+```apacheconfig
     php artisan crud:publish
   
     php artisan crud.publish:layout 
     php artisan crud.publish:layout --localized (For Localized Views, run it with the option --localized)
 ```
 ### Install npm
-```
+```apacheconfig
     npm install
     npm run dev
-  
 ```
-
 ### Generator Commands
-
     Generator provides various commands to generate scaffold & apis.
-  
+```apacheconfig
     php artisan crud:api $MODEL_NAME  
     
     php artisan crud:scaffold $MODEL_NAME
@@ -57,12 +53,10 @@ This Generator package provides various generators like CRUD, API, Controller, M
     php artisan crud:scaffold $MODEL_NAME --datatables=true (Single Page crud with datatables)
     
     php artisan crud:api_scaffold $MODEL_NAME
- 
-## Exmple
-
-``` 
+```  
+## Example
+``` apacheconfig
     php artisan crud:scaffold Post --datatables=true 
-    
 ```
 ## Screenshot
 ![](https://www.linkpicture.com/q/s1_6.png)
@@ -82,8 +76,6 @@ This project is licensed under the MIT License - see the [License File](LICENSE)
 <a href=""></a>
 
 ## Author
-
-
 #### Ravi Navadiya :email: [Email Me](mailto:ravinavadiya786@gmail.com)
 
 ## License
