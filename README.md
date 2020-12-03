@@ -1,4 +1,4 @@
-InfyOm Laravel Generator GUI Builder
+Laravel Crud Generator GUI Builder
 =====================================
 
 Documentation is located [here](http://labs.infyom.com/laravelgenerator)
