@@ -64,6 +64,7 @@ This Generator package provides various generators like CRUD, API, Controller, M
     php artisan crud:scaffold Post --datatables=true 
     
 ```
+## Screenshot
 ![](https://www.linkpicture.com/q/s1_6.png)
 ![](https://www.linkpicture.com/q/s11.png)
 ![](https://www.linkpicture.com/q/s2_5.png)
