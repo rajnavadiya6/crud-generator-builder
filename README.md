@@ -60,8 +60,25 @@ This Generator package provides various generators like CRUD, API, Controller, M
  
 ## Exmple
 
-``` php artisan crud:scaffold Blog --datatables=true ```
+``` 
+    php artisan crud:scaffold Post --datatables=true 
+    
+```
+![](https://www.linkpicture.com/q/s1_6.png)
+![](https://www.linkpicture.com/q/s11.png)
+![](https://www.linkpicture.com/q/s2_5.png)
+![](https://www.linkpicture.com/q/s3_2.png)
+![](https://www.linkpicture.com/q/s5_3.png)
+![](https://www.linkpicture.com/q/s4_3.png)
+![](https://www.linkpicture.com/q/s8_1.png)
+![](https://www.linkpicture.com/q/s6_1.png)
+![](https://www.linkpicture.com/q/s7.png)
+![](https://www.linkpicture.com/q/s9.png)
+![](https://www.linkpicture.com/q/s10.png)
 
+
+This project is licensed under the MIT License - see the [License File](LICENSE) for details
+<a href=""></a>
 
 ## Author
 
@@ -70,4 +87,3 @@ This Generator package provides various generators like CRUD, API, Controller, M
 
 ## License
 
-This project is licensed under the MIT License - see the [License File](LICENSE) for details
