@@ -1,5 +1,6 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('$FIELD_NAME$', __('models/$MODEL_NAME_PLURAL_CAMEL$.fields.$FIELD_NAME$').':') !!}
-    {!! Form::textarea('$FIELD_NAME$', null, ['class' => 'form-control']) !!}
+     {!! Form::textarea('$FIELD_NAME$', old('$FIELD_NAME$'), ['class' => 'form-control '. ($errors->has('$FIELD_NAME$') ? 'is-invalid':'')$SIZE$]) !!}
+    <div class="invalid-feedback">{{ $errors->first('$FIELD_NAME$') }}</div>
 </div>

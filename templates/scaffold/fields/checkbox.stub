@@ -1,8 +1,9 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
-    <label class="checkbox-inline">
+    <label class="checkbox-inline {{  ($errors->has('$FIELD_NAME$') ? 'is-invalid':'') }}">
         {!! Form::hidden('$FIELD_NAME$', 0) !!}
         {!! Form::checkbox('$FIELD_NAME$', '$CHECKBOX_VALUE$', null) !!}
     </label>
+    <div class="invalid-feedback">{{ $errors->first('$FIELD_NAME$') }}</div>
 </div>
