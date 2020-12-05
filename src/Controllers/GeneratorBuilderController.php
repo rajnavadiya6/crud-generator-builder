@@ -15,7 +15,12 @@ class GeneratorBuilderController extends Controller
 {
     public function builder()
     {
-        return view(config('crud.generator_builder.views.builder'));
+        $models = [];
+        foreach (getModels() as $model) {
+            $models [] = basename($model);
+        }
+
+        return view(config('crud.generator_builder.views.builder'), compact('models'));
     }
 
     public function fieldTemplate()
@@ -25,7 +30,12 @@ class GeneratorBuilderController extends Controller
 
     public function relationFieldTemplate()
     {
-        return view(config('crud.generator_builder.views.relation-field-template'));
+        $models = [];
+        foreach (getModels() as $model) {
+            $models [] = basename($model);
+        }
+
+        return view(config('crud.generator_builder.views.relation-field-template'), compact('models'));
     }
 
     public function generate(BuilderGenerateRequest $request)

@@ -51,7 +51,7 @@ class GeneratorBuilderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('crud.publish.generator-builder', function ($app) {
+        $this->app->singleton('crud.publish.gui', function ($app) {
             return new GeneratorBuilderRoutesPublisherCommand();
         });
 
@@ -128,7 +128,7 @@ class GeneratorBuilderServiceProvider extends ServiceProvider
         });
 
         $this->commands([
-            'crud.publish.generator-builder',
+            'crud.publish.gui',
             'crud.publish',
             'crud.api',
             'crud.scaffold',

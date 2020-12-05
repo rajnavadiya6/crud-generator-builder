@@ -13,7 +13,7 @@ class GeneratorBuilderRoutesPublisherCommand extends Command
      *
      * @var string
      */
-    protected $name = 'crud.publish:generator-builder';
+    protected $name = 'crud.publish:gui';
 
     /**
      * The console command description.
