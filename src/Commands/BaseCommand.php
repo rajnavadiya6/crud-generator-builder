@@ -305,7 +305,7 @@ class BaseCommand extends Command
             ['factory', null, InputOption::VALUE_NONE, 'To generate factory'],
             ['seeder', null, InputOption::VALUE_NONE, 'To generate seeder'],
             ['localized', null, InputOption::VALUE_NONE, 'Localize files.'],
-            ['ajax', null, InputOption::VALUE_NONE, 'Localize files.'],
+            ['ajax', null, InputOption::VALUE_NONE, 'Ajax crud with single page.'],
             ['repositoryPattern', null, InputOption::VALUE_REQUIRED, 'Repository Pattern'],
             ['connection', null, InputOption::VALUE_REQUIRED, 'Specify connection name'],
         ];

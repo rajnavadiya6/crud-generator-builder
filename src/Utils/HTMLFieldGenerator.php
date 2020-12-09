@@ -14,7 +14,6 @@ class HTMLFieldGenerator
         switch ($field->htmlType) {
             case 'text':
             case 'textarea':
-            case 'date':
             case 'file':
             case 'email':
             case 'password':
@@ -39,6 +38,27 @@ class HTMLFieldGenerator
                 $fieldTemplate = str_replace(
                     '$INPUT_ARR$',
                     GeneratorFieldsInputUtil::prepareKeyValueArrayStr($radioLabels),
+                    $fieldTemplate
+                );
+                break;
+            case 'dateTime':
+                $fieldTemplate = get_template('scaffold.fields.date'.$localized, $templateType);
+                $fieldTemplate = str_replace(
+                    '$PICKER_FORMATE$', 'YYYY-MM-DD HH:mm:ss',
+                    $fieldTemplate
+                );
+                break;
+            case 'date':
+                $fieldTemplate = get_template('scaffold.fields.date'.$localized, $templateType);
+                $fieldTemplate = str_replace(
+                    '$PICKER_FORMATE$', 'YYYY-MM-DD',
+                    $fieldTemplate
+                );
+                break;
+            case 'time':
+                $fieldTemplate = get_template('scaffold.fields.date'.$localized, $templateType);
+                $fieldTemplate = str_replace(
+                    '$PICKER_FORMATE$', 'HH:mm:ss',
                     $fieldTemplate
                 );
                 break;

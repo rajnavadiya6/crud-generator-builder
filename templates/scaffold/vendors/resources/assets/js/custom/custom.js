@@ -312,6 +312,9 @@ window.fillEditDataWithKeys = function (data, formSelector) {
         if ($(selector).hasClass('select2-hidden-accessible')) {
             $(selector).val(val).trigger('change');
         }
+        if ($(selector).hasClass('custom_datepicker')) {
+            $(selector).trigger('change');
+        }
     });
 };
 window.showModelData = function (data) {

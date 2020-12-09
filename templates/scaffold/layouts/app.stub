@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/iziToast.min.css') }}">
     <link href="{{ asset('assets/css/sweetalert.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/css/select2.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/css/bootstrap-datetimepicker.css') }}" rel="stylesheet" type="text/css"/>
     
     @stack('css')
     @yield('page_css')
@@ -55,6 +56,7 @@
 <script src="{{ asset('assets/js/iziToast.min.js') }}"></script>
 <script src="{{ asset('assets/js/select2.min.js') }}"></script>
 <script src="{{ asset('assets/js/moment.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap-datetimepicker.min.js') }}"></script>
 
 <!-- Template JS File -->
 <script src="{{ asset('js/stisla.js') }}"></script>
