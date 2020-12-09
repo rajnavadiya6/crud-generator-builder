@@ -32,6 +32,16 @@ class HTMLFieldGenerator
                     $fieldTemplate
                 );
                 break;
+            case 'select2':
+                $fieldTemplate = get_template('scaffold.fields.select2'.$localized, $templateType);
+                $radioLabels = GeneratorFieldsInputUtil::prepareKeyValueArrFromLabelValueStr($field->htmlValues);
+
+                $fieldTemplate = str_replace(
+                    '$INPUT_ARR$',
+                    GeneratorFieldsInputUtil::prepareKeyValueArrayStr($radioLabels),
+                    $fieldTemplate
+                );
+                break;
             case 'checkbox':
                 $fieldTemplate = get_template('scaffold.fields.checkbox'.$localized, $templateType);
                 if (count($field->htmlValues) > 0) {

@@ -1,0 +1,15 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
+    {!! Form::select('$FIELD_NAME$', $INPUT_ARR$, null, ['id' => '','class' => 'form-control custom_select '. ($errors->has('$FIELD_NAME$') ? 'is-invalid':'')]) !!}
+    <div class="invalid-feedback">{{ $errors->first('$FIELD_NAME$') }}</div>
+</div>
+@push('scripts')
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $('.custom_select').select2({
+                width: '100%',
+            });
+        });
+    </script>
+@endpush
