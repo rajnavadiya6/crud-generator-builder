@@ -309,6 +309,9 @@ window.fillEditDataWithKeys = function (data, formSelector) {
     $.each(data, function (key, val) {
         let selector = `${formSelector} :input[name=${key}]`;
         $(selector).val(val);
+        if ($(selector).hasClass('select2-hidden-accessible')) {
+            $(selector).val(val).trigger('change');
+        }
     });
 };
 window.showModelData = function (data) {
