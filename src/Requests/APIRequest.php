@@ -1,6 +1,6 @@
 <?php
 
-namespace Crud\GeneratorBuilder\Request;
+namespace Crud\GeneratorBuilder\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Arr;
