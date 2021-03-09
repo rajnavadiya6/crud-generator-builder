@@ -30,12 +30,15 @@ This Generator package provides various generators like CRUD, API, Controller, M
 ### Install crud/generator-builder
 ```apacheconfig
     composer require crud/generator-builder
+    
+    Add Below Line To app.php
+    Crud\GeneratorBuilder\GeneratorBuilderServiceProvider::class,
 ```
 ### Publish Layout
 ```apacheconfig
     php artisan crud:publish
   
-    php artisan crud.publish:layout 
+    php artisan crud.publish:layout
     php artisan crud.publish:layout --localized (For Localized Views, run it with the option --localized)
 ```
 ### Install npm
