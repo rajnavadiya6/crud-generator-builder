@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    $MODEL_NAME_PLURAL_HUMAN$ 
+    $MODEL_NAME_PLURAL_HUMAN$
 @endsection
 @push('css')
     <link href="{{ asset('assets/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css"/>
@@ -38,6 +38,7 @@
         let editButtonSelector = '.edit-btn';
         let deleteButtonSelector = '.delete-btn';
         let showButtonSelector = '.show-btn';
+        let deleteLabel = '$MODEL_NAME_HUMAN$';
     </script>
     <script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ mix('assets/js/custom/custom-datatable.js') }}"></script>

@@ -9,7 +9,7 @@ class $MODEL_NAME$DataTable
     public function get()
     {
         $model = new $MODEL_NAME$();
-        /** @var Post $query */
+        /** @var $MODEL_NAME$ $query */
         $query = $MODEL_NAME$::all();
         $query->map(function ($item) {
             $id = $item['id'];

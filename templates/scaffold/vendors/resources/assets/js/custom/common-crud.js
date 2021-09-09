@@ -69,7 +69,7 @@ $(document).on('click', showButtonSelector, function (event) {
 $(document).on('click', deleteButtonSelector, function (event) {
     let Id = $(event.currentTarget).data('id');
     let deleteUrl = indexUrl + Id;
-    deleteItem(deleteUrl, tableName, 'Demo');
+    deleteItem(deleteUrl, tableName, deleteLabel);
 });
 
 $(createModelId).on('hidden.bs.modal', function () {
