@@ -1,7 +1,9 @@
 $FIELDS$
 
 <!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') }}" class="btn btn-light">Cancel</a>
+<div class="col-sm-12">
+    {{ Form::button('Save', ['type'=>'submit','class' => 'btn btn-primary','id'=>'btnSave','data-loading-text'=>"<span class='spinner-border spinner-border-sm'></span> Processing..."]) }}
+    <button type="button"  class="btn btn-light ml-1" data-dismiss="modal">
+        Cancel
+    </button>
 </div>
