@@ -53,9 +53,9 @@
                                 <div class="form-group col-md-4">
                                     <label for="drdCommandType">Command Type</label>
                                     <select id="drdCommandType" class="form-control" style="width: 100%">
-                                        <option value="infyom:api_scaffold">API Scaffold Generator</option>
-                                        <option value="infyom:api">API Generator</option>
-                                        <option value="infyom:scaffold">Scaffold Generator</option>
+                                        <option value="crud:api_scaffold">API Scaffold Generator</option>
+                                        <option value="crud:api">API Generator</option>
+                                        <option value="crud:scaffold">Scaffold Generator</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
