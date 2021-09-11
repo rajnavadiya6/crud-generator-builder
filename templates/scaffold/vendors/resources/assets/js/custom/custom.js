@@ -18,6 +18,9 @@ $(function () {
     $('.modal').on('shown.bs.modal', function () {
         $(this).find('input:text').first().focus();
     });
+    $('.sidebar-menu').find('.dropdown .active').each(function (){
+        $(this).closest('.dropdown').addClass('active');
+    });
 });
 
 window.resetModalForm = function (formId) {
@@ -241,7 +244,7 @@ $(document).ready(function () {
 });
 
 window.urlValidation = function (value, regex) {
-    let urlCheck = (value == '' ? true : (value.match(regex)
+    let urlCheck = (value === '' ? true : (value.match(regex)
         ? true
         : false));
     if (!urlCheck) {
@@ -249,7 +252,7 @@ window.urlValidation = function (value, regex) {
     }
 
     return true;
-};
+}
 
 $('.languageSelection').on('click', function () {
     let languageName = $(this).data('prefix-value');
@@ -275,16 +278,16 @@ window.manageFormAjaxErrors = function (result, selector) {
     } else {
         displayErrorMessage(result.responseJSON.message);
     }
-};
+}
 window.resetFormErrors = function (selector) {
     $(selector).find('.is-invalid').removeClass('is-invalid');
     $(selector).find('.invalid-feedback').hide();
-};
+}
 window.formSubmitSuccess = function (result, modelSelector, tableSelector) {
     displaySuccessMessage(result.message);
     $(modelSelector).modal('hide');
     $(tableSelector).DataTable().ajax.reload(null, false);
-};
+}
 window.submitForm = function (
     url, type, data, formId, modelId, tableName, btnId = '#btnSave') {
     $.ajax({
@@ -304,7 +307,7 @@ window.submitForm = function (
             processingBtn(formId, btnId);
         },
     });
-};
+}
 window.fillEditDataWithKeys = function (data, formSelector) {
     $.each(data, function (key, val) {
         let selector = `${formSelector} :input[name=${key}]`;
@@ -316,7 +319,7 @@ window.fillEditDataWithKeys = function (data, formSelector) {
             $(selector).trigger('change');
         }
     });
-};
+}
 window.showModelData = function (data) {
     $.each(data, function (key, val) {
         let selector = `#show_${key}`;
@@ -326,5 +329,4 @@ window.showModelData = function (data) {
         val = (isEmpty(val)) ? 'N/A' : val;
         $(selector).text(val);
     });
-};
-
+}
